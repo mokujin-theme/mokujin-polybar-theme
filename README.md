@@ -1,92 +1,104 @@
+![](screenshots/bar-only.png)
 # Mokujin Polybar Theme
+A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin colorway
+
+![](https://img.shields.io/badge/Version-0.97-green) ![](https://img.shields.io/badge/License-GPLv3-yellowgreen) ![](https://img.shields.io/badge/Polybar-3.6.3%2B-blue)
+
+## Features
+- Pleasant, earthy, minimalist design
+- Single ini file using inline shell scripts
+- User configuration section
+- Day/Night weather conditions & current temp
+- OpenHAB weather integration support
+- Japanese day of the week
+- Package manager update notification (pacman and apt)
+- Bluetooth power button and management
+- Wireless gamepad battery indicator
+- System battery indicator
+- Volume control
+- Screen brightness control
+- CPU & RAM utilization indicators
+- MPD control + current track
+- Workspace control
+- Error notifications (via libnotify)
+
+## Screenshots
+![](screenshots/screenshot-2.png)<sub>wallpaper credit: Dani Pendergast (www.danipendergast.com)</sub>
+![](screenshots/screenshot-1.png)<sub>wallpaper credit: OpenAI DALL-E 2</sub>
 
 
+## Requirements
+Requirements have been kept as minimal as possible.  Mostly they are pretty standard utilities, even for minimalist desktop systems.  Shell scripting is bash, but hopefully works for other shells.  All script utilities and fonts are free and available in Arch repos and AUR.
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/mokujin-theme/mokujin-polybar-theme.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/mokujin-theme/mokujin-polybar-theme/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+- **Polybar 3.6.3+** 
+- **Noto CJK fonts**
+- **mononoki Nerd Fonts** or **Nerd Fonts Complete**
+- **pulseaudio** or **pipewire-pulse**
+- **bash** (or compatible)
+- **date**
+- **bc**
+- **curl** (weather)
+- **jq** (weather)
+- **checkupdates** (Arch / pacman-based distros) (optional)
+- **apt-get** (Debian / apt-based distros - see notes)  (optional)
+- **bluetoothctl** (optional)
+- **notify-send** (optional)
+- **mpd** (optional)
+- Gamepad driver that creates a sysfs node for capacity in percentage
+- OpenWeatherMap API key (free) or OpenHAB server configured to provide OWM data.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Fonts
+For arch users the noto fonts can be found in **extra** and the Nerd Fonts can be found in **aur**.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+```
+pacman -S noto-fonts-cjk
+yay -S nerd-fonts-complete
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### Theme file
+The theme is contained in a single file, so you can just drop mokujin.ini where you want and tell polybar to use it.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### Other dependencies
+Assuming you already have a basic running system with audio and optionally MPD set up, you *might* need one or more of these packages installed.
+
+Arch users
+```
+pacman -S bc curl jq pacman-contrib bluez-utils 
+```
+
+## Configuration
+You're going to need to configure a few things first.  I've created a section at the top of the ini file for user configuration so you shouldn't have to hunt throught the rest of it to get going.
+
+The user configuration is friendly and well documented inside the mokujin.ini file and should hopefully make everything pretty clear.
+
+For polybar options like MPD configuration, you can find the documentation [here](https://github.com/polybar/polybar/wiki)
+
+You're also going to want to use the weather modules, in which case you need an API key.  You can get a **free** OpenWeatherMap API key [here](https://openweathermap.org/appid). 
+
+Side note:  I'm a big privacy advocate, so I want to mention that I've never given OWM any data other than a junk email address and I've never been contacted in any way other than to email me the API key.  I've had my key for *years* and no one has ever bugged me and I've never had to log into the website, even for API documentation.
+
+
+## Troubleshooting
+If you're experiencing text rendering issues, make sure the necessary font packages in the requirements section are installed and update your font cache with `fc-cache -f`.  You will probably need to restart polybar afterwards.
+
+
+## Note for Debain / apt distro users
+Unfortunately there is no equivalent of the pacman **checkupdates** utility for **apt**.  Simply, **apt** will not allow you to compare or even read the package lists as a non-root user, which means we cannot use it to check the repos for package changes.
+
+This script does, however, rootlessly do a *dry run* on an **apt-get upgrade** to see if anything *would* be upgraded.  Which, of course, doesn't do much by itself if the local package lists are not up-to-date with the repos.
+
+To make this work, you can create a **cron job** which will run `apt-get update` once a day as root.  This will not upgrade anything, but will keep the local package list more or less synced and up-to-date with the repos.  With that in place, the script can check the local package lists for upgradable packages and provide a notification if there are any.
+
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+If you find a bug, or would like to see a feature implemented, please create an issue and I'll take a look.  Or, if you prefer to just submit a PR, thats fine too.  
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+I need users to provide sysfs device paths for whatever gamepads they may have which create a directory in `/sys/class/power_supply/`.  I'm looking for files within these paths which provide battery levels.  Open a support issue if you'd like to help with information about your gamepad.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+As always, you can buy me a coffee if you find this software useful and want to say thanks ;)
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
 
 ## License
-For open source projects, say how it is licensed.
+This software is licensed under the GNU Affero General Public License v3+
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
