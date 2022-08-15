@@ -34,6 +34,7 @@ Requirements have been kept as minimal as possible.  Mostly they are pretty stan
 - **Noto CJK fonts**
 - **mononoki Nerd Fonts** or **Nerd Fonts Complete**
 - **pulseaudio** or **pipewire-pulse**
+- **pavucontrol** (optional)
 - **bash** (or compatible)
 - **date**
 - **bc**
@@ -64,7 +65,7 @@ Assuming you already have a basic running system with audio and optionally MPD s
 
 Arch users
 ```
-pacman -S bc curl jq pacman-contrib bluez-utils 
+pacman -S bc curl jq pacman-contrib bluez-utils pavucontrol 
 ```
 
 ## Configuration
