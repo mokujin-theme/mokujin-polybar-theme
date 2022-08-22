@@ -101,5 +101,4 @@ As always, you can buy me a coffee if you find this software useful and want to 
 
 
 ## License
-This software is licensed under the GNU General Public License v3+
-
+This software is licensed under the GNU General Public License v3+.  See LICENSE for details.
