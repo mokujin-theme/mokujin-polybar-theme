@@ -23,12 +23,12 @@ A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin c
 - Error notifications (via libnotify)
 
 ## Screenshots
-<html><body><p>
-<img src="screenshots/screenshot-2.png"  width="800"><br>
-<sub>wallpaper credit: Dani Pendergast (www.danipendergast.com)</sub><br>
+<html><body>
+<img src="screenshots/screenshot-2.png"  width="800">
+<><sub>wallpaper credit: Dani Pendergast (www.danipendergast.com)</sub></p>
 <img src="screenshots/screenshot-1.png"  width="800"><br>
-<sub>wallpaper credit: OpenAI DALL-E 2</sub><br>
-</p></body></html>
+<p><sub>wallpaper credit: OpenAI DALL-E 2</sub></p>
+</body></html>
 
 ## Requirements
 Requirements have been kept as minimal as possible.  Mostly they are pretty standard utilities, even for minimalist desktop systems.  Shell scripting is bash, but hopefully works for other shells.  All script utilities and fonts are free and available in Arch repos and AUR.
