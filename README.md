@@ -25,7 +25,7 @@ A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin c
 ## Screenshots
 <html><body>
 <img src="screenshots/screenshot-2.png"  width="800">
-<><sub>wallpaper credit: Dani Pendergast (www.danipendergast.com)</sub></p>
+<p><sub>wallpaper credit: Dani Pendergast (www.danipendergast.com)</sub></p>
 <img src="screenshots/screenshot-1.png"  width="800"><br>
 <p><sub>wallpaper credit: OpenAI DALL-E 2</sub></p>
 </body></html>
