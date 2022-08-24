@@ -23,9 +23,9 @@ A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin c
 - Error notifications (via libnotify)
 
 ## Screenshots
-<html><body><img src="screenshots/screenshot-2.png"  width="800"/></body></html>
+<html><body><p><img src="screenshots/screenshot-2.png"  width="800"></p></body></html>
 <sub>wallpaper credit: Dani Pendergast (www.danipendergast.com)</sub>
-<html><body><img src="screenshots/screenshot-1.png"  width="800"/></body></html>
+<html><body><p><img src="screenshots/screenshot-1.png"  width="800"></p></body></html>
 <sub>wallpaper credit: OpenAI DALL-E 2</sub>
 
 
