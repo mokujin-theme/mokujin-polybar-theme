@@ -2,7 +2,7 @@
 # Mokujin Polybar Theme
 A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin colorway
 
-![](https://img.shields.io/badge/Version-0.97-green) ![](https://img.shields.io/badge/License-GPLv3-yellowgreen) ![](https://img.shields.io/badge/Polybar-3.6.3%2B-blue)
+![](https://img.shields.io/badge/Version-0.99-green) ![](https://img.shields.io/badge/License-GPLv3-yellowgreen) ![](https://img.shields.io/badge/Polybar-3.6.3%2B-blue)
 
 ## Features
 - Pleasant, earthy, minimalist design
@@ -32,10 +32,10 @@ A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin c
 ## Requirements
 Requirements have been kept as minimal as possible.  Mostly they are pretty standard utilities, even for minimalist desktop systems.  Shell scripting is bash, but hopefully works for other shells.  All script utilities and fonts are free and available in Arch repos and AUR.
 
-- **Polybar 3.6.3+** 
+- **Polybar 3.6.3+ (may need newest git version)**
 - **Noto CJK fonts**
 - **mononoki Nerd Fonts** or **Nerd Fonts Complete**
-- **pulseaudio** or **pipewire-pulse**
+- **alsa** / **pulseaudio** / **pipewire**
 - **pavucontrol** (optional)
 - **bash** (or compatible)
 - **date**
@@ -47,12 +47,12 @@ Requirements have been kept as minimal as possible.  Mostly they are pretty stan
 - **bluetoothctl** (optional)
 - **notify-send** (optional)
 - **mpd** (optional)
-- Gamepad driver that creates a sysfs node for capacity in percentage
-- OpenWeatherMap API key (free) or OpenHAB server configured to provide OWM data.
+- Gamepad driver that creates a sysfs node for capacity in percentage. (optional)
+- OpenWeatherMap API key (free) or OpenHAB server configured to provide OWM data. (optional)
 
 ## Installation
 ### Fonts
-For arch users the noto fonts can be found in **extra** and the Nerd Fonts can be found in **aur**.
+For Arch users the noto fonts can be found in **extra** and the Nerd Fonts can be found in **aur**.
 
 ```
 pacman -S noto-fonts-cjk
@@ -65,7 +65,7 @@ The theme is contained in a single file, so you can just drop mokujin.ini where 
 ### Other dependencies
 Assuming you already have a basic running system with audio and optionally MPD set up, you *might* need one or more of these packages installed.
 
-Arch users
+Arch users:
 ```
 pacman -S bc curl jq pacman-contrib bluez-utils pavucontrol 
 ```
@@ -79,11 +79,18 @@ For polybar options like MPD configuration, you can find the documentation [here
 
 You're also going to want to use the weather modules, in which case you need an API key.  You can get a **free** OpenWeatherMap API key [here](https://openweathermap.org/appid). 
 
-Side note:  I'm a big privacy advocate, so I want to mention that I've never given OWM any data other than a junk email address and I've never been contacted in any way other than to email me the API key.  I've had my key for *years* and no one has ever bugged me and I've never had to log into the website, even for API documentation.
+**For ALSA users:**  The default volume module is set to `pulse`.  You will need to edit the `modules-right` line and change `pulse` to `alsa`.
+
+**Side note:**  I'm a big privacy advocate, so I want to mention that I've never given OWM any data other than a junk email address and I've never been contacted in any way other than to email me the API key.  I've had my key for *years* and no one has ever bugged me and I've never had to log into the website, even for API documentation.
 
 
 ## Troubleshooting
-If you're experiencing text rendering issues, make sure the necessary font packages in the requirements section are installed and update your font cache with `fc-cache -f`.  You will probably need to restart polybar afterwards.
+### Leaf / section edges are not round
+This is due to a bug in older Polybar versions.  Make sure you're using the newest git version of Polybar if you have any issues.
+
+### Bar looks garbled / missing characters
+If you're experiencing text rendering issues, make sure the necessary font packages in the requirements section are installed and update your font cache with `fc-cache -f`.  You will need to restart polybar afterwards.
+Also try running polybar from a terminal and see what error messages it spits out.  It will let you know if it was not able to load any fonts.
 
 
 ## Note for Debain / apt distro users
