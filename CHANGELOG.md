@@ -1,5 +1,9 @@
 # Mokujin Polybar Theme changelog
 
+## [v1.00] 2022/12/22
+### Added 
+ - Added Artix OS font icon
+
 ## [v0.99] 2022/12/22
 ### Added
  - Added alsa support module

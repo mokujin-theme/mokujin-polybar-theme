@@ -2,7 +2,7 @@
 # Mokujin Polybar Theme
 A theme for [Polybar](https://github.com/polybar/polybar) based on the Mokujin colorway
 
-![](https://img.shields.io/badge/Version-0.99-green) ![](https://img.shields.io/badge/License-GPLv3-yellowgreen) ![](https://img.shields.io/badge/Polybar-3.6.3%2B-blue)
+![](https://img.shields.io/badge/Version-1.00-green) ![](https://img.shields.io/badge/License-GPLv3-yellowgreen) ![](https://img.shields.io/badge/Polybar-3.6.3%2B-blue)
 
 ## Features
 - Pleasant, earthy, minimalist design
